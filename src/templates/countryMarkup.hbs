@@ -1,0 +1,20 @@
+<article class='country'>
+  <h2 class='country__title'>{{name}}</h2>
+  <div class='country__info'>
+    <div class='country__text'>
+      <p class='country__text-title'>Capital:
+        <span class='country__text-info'>{{capital}}</span></p>
+      <p class='country__text-title'>Population:
+        <span class='country__text-info'>{{population}}</span></p>
+      <p class='country__text-title'>Languages: </p>
+      <ul>
+        {{#each languages}}
+          <li class='country__data'>{{this.name}}</li>
+        {{/each}}
+      </ul>
+    </div>
+    <div class='country__right'>
+      <img src={{flags.svg}} alt={{name}} class='country__flag' />
+    </div>
+  </div>
+</article>
